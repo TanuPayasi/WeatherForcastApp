@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>  
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+<!--talks about the conatiner i.e. the search box thing both inside and outside--> 
+    <div class="container">  <!--diffence between fluid and non fluid is fluid stretches and non fluid doesnt and is rstricted with width-->
+        <div class="header">
+<!--Search box-->            
+            <div class="search-box">
+                <input type="text" placeholder="Enter your location" class="input-box">
+
+<!--this is the magnifying glass that i got from the last line of the html page from font awesome kit-->
+               <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>  <!--id isliye dia to access the thing in js-->
+            </div>
+        </div>
+<!--location not found-->     
+        <div class="location-not-found">
+            <h1>Sorry, Location not found!!!</h1>
+            <img src="./404.png" alt="404 Error">
+        </div>
+ 
+<!--Weather body-->
+        <div class="weather-body">
+            <img src="./ cloud.png" alt="Weather Image" class="weather-img">
+
+            <div class="weather-box">
+                <p class="temperature">0 <sup>°C</sup></p>
+                <p class="description">light rain</p>
+            </div>
+
+            <div class="weather-details">
+                <div class="humidity">
+                    <i class="fa-sharp fa-solid fa-droplet"></i>
+                    <div class="text">
+                        <span id="humidity">45%</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+
+                <div class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="text">
+                        <span id="wind-speed">12Km/H</span>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+ <!--this code is used to give the magnifying glass style on the search box-->  
+  <script src="https://kit.fontawesome.com/fd57bc92cc.js" crossorigin="anonymous"></script></body>
+</html>
