@@ -1,0 +1,146 @@
+/*the general styling that should be done in the page is given below*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /*comes in center of the page*/
+    align-items: center; /*comes vertically center of the page*/
+    background-color: #000;
+}
+
+.container{
+    width: 400px;
+    height: min-content;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;/*if i dont use flex i cant use justify content*/
+    justify-content: space-between; /*to create a space between glass and search button thats why i used flex box and space between option*/
+    align-items: center;
+}
+
+.search-box input{  /*box ke andar jo ek chota box hai jisme tum likhoge uska design ho raha hai yaha*/
+    width: 84%;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #000;  /*it doesnt change the color of the text bcos ye placeholder hai and for that we have made aother css styles in the nect frame of code*/
+    background-color: #e6f5fb;  /*ek light blue color jo hai box ke andar..ye uski baat kar raha hai*/
+    padding: 12px 16px;
+    border-radius: 14px;
+}
+
+.search-box input::placeholder{
+    color: #000;
+}
+
+.search-box button{ /*magnifying glass ki baat ho rahi hai*/
+    width: 46px;
+    height: 46px;
+    background-color: #e8f0f4;
+    border-radius: 50%;  /*to get circle we use the method of the radius to be 50%*/
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-box button:hover{  /*button ke paas le jane se ek change ata haina...usko hover bolte hai*/
+    color: #fff;
+    background-color: #ababab;
+}
+
+.weather-body{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  /*temperature ko pic ke neeche le jata hai in row*/
+    margin-block: 20px;
+    display: none;
+}
+.weather-body img{
+    width: 60%;  /*60 percent of its actual image*/
+}
+
+.weather-box{
+    margin-block: 20px;
+    text-align: center;
+}
+
+.weather-box .temperature{
+    font-size: 40px;
+    font-weight: 800;
+    position: relative;
+}
+
+.weather-box .temperature sup{
+    font-size: 20px;
+    position: absolute;
+    font-weight: 600;
+}
+
+.weather-box .description{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.weather-details{
+    width: 100%;
+    display: flex;  /*comes in one line*/
+    justify-content: space-between;  /*have equal space between two lines*/
+    margin-top: 30px;  /*upar se duri rakha jata hai iss code se*/
+}
+
+.humidity, .wind{
+    display: flex;
+    align-items: center;
+}
+
+.humidity{
+    margin-left: 20px; /*left border se thora dur*/
+}
+
+.wind{
+    margin-right: 20px;  /*right border se thora dur*/
+}
+
+.weather-details i{
+    font-size: 36px;
+}
+
+.weather-details .text{/*icon aur uska info ke beech ki batein*/
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.text span{  /*jo humididyty aur speed word hai usko bold kardo*/
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.location-not-found{
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location-not-found h1{
+    font-size: 20px;
+    color: #6b6b6b;
+    margin-block-end: 15px;
+}
+.location-not-found img{
+    width: 80%;
+}
